@@ -87,10 +87,10 @@ SECTIONS {
 
   .stack ORIGIN(RAM) + LENGTH(RAM) - STACK_SIZE : {
     FILL(0);
-    PROVIDE(__STACK_START__ = .);
+    PROVIDE(__STACK_START__ = . );
     . += STACK_SIZE;
-    PROVIDE(__C_STACK_TOP__ = .);
-    PROVIDE(__STACK_END__ = .);
+    PROVIDE(__C_STACK_TOP__ = . );
+    PROVIDE(__STACK_END__ = . );
   } >RAM
 
   /DISCARD/ : {
